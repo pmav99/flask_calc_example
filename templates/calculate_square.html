@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+      Calculations example with flask.
+    </title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"> </link>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
+  </head>
+  <body>
+    <br/>
+    <div class="container">
+      <div class="panel panel-primary" style="width:750px;margin:0px auto">
+        <div class="panel-heading">Square calculation</div>
+        <div class="panel-body">
+          <form data-toggle="validator" role="form" method="post" action="{{ url_for('calculate_square_post') }}">
+            <div class="form-group">
+              <label class="control-label" for="inputName">Δώσε τον αριθμό Ν</label>
+              <input class="form-control" data-error="Παρακαλώ δώσε τον αριθμό Ν." name="n" id="n" placeholder="N"  type="number" step=0.001 required />
+              <div class="help-block with-errors"></div>
+            </div>
+            <div class="form-group">
+              <button class="btn btn-primary" type="submit">
+              Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
